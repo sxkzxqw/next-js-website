@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styles from '../styles/Navbar.module.scss';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -10,7 +10,7 @@ const navigation = [
     { id: 3, title: 'Contacts', path: '/contacts' },
 ]
 
-const Navbar = () => {
+const Navbar: FC = () => {
     const { pathname } = useRouter()
 
     return (
@@ -18,7 +18,7 @@ const Navbar = () => {
             <Image src='/logo.png' width={60} height={60} alt='logo' />
             <div className={styles.links}>
                 {navigation.map(({ id, title, path }) => {
-                    return <Link key={id} href={path} className={pathname === path ? styles.active : null}>{title}</Link>
+                    return <Link key={id} href={path} className={pathname === path ? styles.active : ''}>{title}</Link>
                 })}
             </div>
         </nav>
