@@ -8,3 +8,15 @@
         margin: 0 10px;
     }
 }
+
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+    border: 2px solid salmon;
+    border-radius: 20px;
+    padding: 10px;
+    gap: 10px;
+}
